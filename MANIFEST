@@ -1,5 +1,6 @@
 MANIFEST
 Makefile.PL
+README
 SVCount.pm
 SVCount.xs
 t/01counts.t

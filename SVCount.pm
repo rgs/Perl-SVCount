@@ -31,9 +31,13 @@ and objects. This might be useful for quickly detecting memory leaks.
 
 C<sv_count()> returns how many SVs (scalar values) are currently allocated.
 
-C<sv_objcount()> returns how many blessed SVs (pbjects) are currently allocated.
+C<sv_objcount()> returns how many blessed SVs (objects) are currently allocated.
 
 =head1 AUTHOR
 
-Copyright (c) 2012 Rafael Garcia-Suarez. This program is free software; you
-may redistribute it and/or modify it under the same terms as Perl itself.
+Copyright (c) 2012 Rafael Garcia-Suarez.
+
+The git repository for this module can be found at L<https://github.com/rgs/Perl-SVCount>.
+
+This program is free software; you may redistribute it and/or modify it under
+the same terms as Perl itself.
