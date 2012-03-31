@@ -1,0 +1,6 @@
+MANIFEST
+Makefile.PL
+SVCount.pm
+SVCount.xs
+t/01counts.t
+t/pod.t
