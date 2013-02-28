@@ -10,10 +10,3 @@ psvc_sv_count()
         RETVAL = PL_sv_count;
     OUTPUT:
         RETVAL
-
-I32
-psvc_sv_objcount()
-    CODE:
-        RETVAL = PL_sv_objcount;
-    OUTPUT:
-        RETVAL

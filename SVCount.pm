@@ -1,13 +1,13 @@
 package Perl::SVCount;
 use XSLoader ();
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 XSLoader::load 'Perl::SVCount', $VERSION;
 
 # keep it lightweight, since this is an instrumentation module
 sub import {
-    *{caller() . '::' . $_} = *$_ for qw/sv_count sv_objcount/;
+    *{caller() . '::sv_count'} = *sv_count;
 }
 
 1;
@@ -26,12 +26,10 @@ Perl::SVCount - Get global count of allocated SVs
 
 =head1 DESCRIPTION
 
-This module allows to access perl's internal global counters of allocated SVs
-and objects. This might be useful for quickly detecting memory leaks.
+This module allows to access perl's internal global counters of allocated SVs.
+This might be useful for quickly detecting memory leaks.
 
 C<sv_count()> returns how many SVs (scalar values) are currently allocated.
-
-C<sv_objcount()> returns how many blessed SVs (objects) are currently allocated.
 
 =head1 AUTHOR
 
